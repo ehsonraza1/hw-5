@@ -1,29 +1,18 @@
 # 05 Work Day Scheduler by Ehson Raza
 
-Following is a browser-based calendar application that allows the user to save events for each hour of the day. The application utilizes (https://momentjs.com/) moment.js library to dynamically log your daily events.
+Following is a browser-based calendar application that allows the user to save events for each hour of the day.
 
-## Acceptance Criteria
+## Usage
 
-TODO Modify the ReadMe
-(Look at activity 12)
+Enter events on the dynamic by simply typing text in the slots provided and save them for the time slot that you require.
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Credits
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
----
+Collaborators: Latisha McNeel, Brandon Gatlin, Peter Winston
+3rd Party Software: The application utilizes (https://momentjs.com/) Moment.js library to dynamically log your daily events.
 
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+```
+
 ```
