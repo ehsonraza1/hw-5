@@ -8,25 +8,25 @@ $(document).ready(function () {
   $("#currentDay").html(displayDate);
 
   var calendarEvent = [];
-  var calendarEventStorage = JSON.parse(
-    localStorage.getItem("calendarEventStorage")
-  );
+  var calendarEventStorage = JSON.parse(localStorage.getItem("<input>"));
   if (calendarEventStorage !== null) {
     calendarEvent = calendarEventStorage;
   }
 
   //Save Button
-  $("button").on("click", function (event) {
+  $("button").on("click", "i", function (event) {
     event.preventDefault();
 
-    var saveColor = $(this).attr("fa-save:before");
+    var saveColor = $("i");
+    saveColor.attr("style", "color:black");
     console.log(saveColor);
 
     //grab input from the text box and save in local storage
 
     var inputEvent = $("input").val();
-    //console.log(input + "input button");
-    //localStorage.setItem("calendarEvent", JSON.stringify(calendarEventStorage));
+
+    console.log(input + "input button");
+    localStorage.setItem("calendarEvent", JSON.stringify(inputEvent));
   });
 
   // $("button").on("click", , function (
