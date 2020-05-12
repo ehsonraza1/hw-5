@@ -4,7 +4,7 @@ $(document).ready(function () {
   // });
 
   //Dynamic Date Displayed on Top of the page
-  var displayDate = moment().format("Hdddd, MMMM Do YYYY, h:mm:ss a");
+  var displayDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
   $("#currentDay").html(displayDate);
 
   var calendarEvent = [];
@@ -16,12 +16,26 @@ $(document).ready(function () {
   }
 
   //Save Button
-  $("button").on("click", function () {
+  $("button").on("click", function (event) {
     event.preventDefault();
+
+    var saveColor = $(this).attr("fa-save:before");
+    console.log(saveColor);
+
     //grab input from the text box and save in local storage
 
     var inputEvent = $("input").val();
     //console.log(input + "input button");
-    localStorage.setItem("calendarEvent", JSON.stringify(calendarEventStorage));
+    //localStorage.setItem("calendarEvent", JSON.stringify(calendarEventStorage));
   });
+
+  // $("button").on("click", , function (
+  //   event
+  // ) {
+  //   event.preventDefault();
+  //   console.lof(event);
+  //   var mouseHover = $(this).attr("bg-info")
+
+  //   mouseHover.attr('style', 'background-color:gray');
+  // });
 });
