@@ -12,20 +12,23 @@ $(document).ready(function () {
   if (calendarEventStorage !== null) {
     calendarEvent = calendarEventStorage;
   }
-
+  var idArr = ["#8", "#9", "#10", "#11", "#12", "#1", "#2", "#3", "#4", "#5"];
   //Save Button
   $("button").on("click", "i", function (event) {
     event.preventDefault();
 
-    var saveColor = $("i");
-    saveColor.attr("style", "color:black");
-    console.log(saveColor);
+    var saveColor = $("i").attr("id", "idArr");
+    if (saveColor.attr("style", "color:black")) {
+      alert("Click Save Icon to save event!");
+    } else {
+      saveColor = saveColor.attr("style", "color:white");
+    }
 
     //grab input from the text box and save in local storage
 
     var inputEvent = $("input").val();
 
-    console.log(input + "input button");
+    console.log(inputEvent + "input button");
     localStorage.setItem("calendarEvent", JSON.stringify(inputEvent));
   });
 
